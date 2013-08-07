@@ -38,7 +38,7 @@ QMap<QUuid, Item*> Factory::getItems(const QString &_type)
 	while(it.hasNext())
 	{
 		it.next();
-		QString id = it.key();
+		QString id = it.key().toString();
 		Item *item = m_pool[_type].value(id, NULL);
 		if(!item)
 		{
